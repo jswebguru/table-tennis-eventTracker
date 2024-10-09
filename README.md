@@ -28,12 +28,18 @@ $ pip install PyTurboJPEG
 python main.py --gpu_idx 0
 
 - Multi-Processing Distributed Data Parallel Training
+  
+```
 python main.py --gpu_idx 0 --no_local --no_seg --no_event
+
 python main.py --dist-url 'tcp://127.0.0.1:29500' --dist-backend 'nccl'
+```
 
 - Multiprocessing-distributed --world-size 1 --rank 0
-python main.py --dist-url 'tcp://IP_OF_NODE1:FREEPORT' --dist-backend 'nccl' --multiprocessing-distributed --world-size 2 --rank 0
 
+```
+python main.py --dist-url 'tcp://IP_OF_NODE1:FREEPORT' --dist-backend 'nccl' --multiprocessing-distributed --world-size 2 --rank 0
+```
 
 ## Evaluation
 
